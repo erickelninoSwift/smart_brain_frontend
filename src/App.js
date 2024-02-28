@@ -15,7 +15,6 @@ const handleFacelocation = (result) => {
 
   const regions = result.outputs[0].data.regions[0];
 
-  // Accessing and rounding the bounding box values
   const boundingBox = regions.region_info.bounding_box;
   const topRow = boundingBox.top_row.toFixed(3);
   const leftCol = boundingBox.left_col.toFixed(3);
