@@ -71,7 +71,7 @@ class App extends Component {
     console.log(this.state.profile);
   }
   buttonOnSubmit = () => {
-    fetch("http://localhost:3000/imageaddress", {
+    fetch("https://jackpot-ai-application-backend.onrender./imageaddress", {
       method: "post",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -82,7 +82,7 @@ class App extends Component {
       .then((result) => {
         console.log(result.outputs[0].data.regions[0].region_info);
         if (result) {
-          fetch("http://localhost:3000/image", {
+          fetch("https://jackpot-ai-application-backend.onrender./image", {
             method: "put",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({

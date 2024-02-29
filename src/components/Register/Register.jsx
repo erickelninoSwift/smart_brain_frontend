@@ -43,7 +43,7 @@ class Register extends Component {
     this.setState({
       userID: id,
     });
-    fetch("http://localhost:3000/register", {
+    fetch("https://jackpot-ai-application-backend.onrender.com/register", {
       method: "post",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
