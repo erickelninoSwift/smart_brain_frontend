@@ -52,6 +52,7 @@ class Register extends Component {
         email: this.state.email,
         password: this.state.password,
         currentID: this.state.userID,
+        entries: 0,
       }),
     })
       .then((response) => {
