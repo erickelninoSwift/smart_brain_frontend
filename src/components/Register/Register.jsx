@@ -51,7 +51,7 @@ class Register extends Component {
         surname: this.state.surname,
         email: this.state.email,
         password: this.state.password,
-        currentID: this.state.id,
+        currentID: this.state.userID,
       }),
     })
       .then((response) => {
