@@ -44,9 +44,7 @@ class Register extends Component {
         password: this.state.password,
       }),
     })
-      .then((response) => {
-        return response.json();
-      })
+      .then((alldataSent) => alldataSent.json())
       .then((userRegistered) => {
         if (userRegistered) {
           this.props.currentUserActiveNow(userRegistered);
