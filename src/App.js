@@ -67,9 +67,7 @@ class App extends Component {
       box: box,
     });
   };
-  componentDidUpdate() {
-    console.log(this.state.profile);
-  }
+
   buttonOnSubmit = () => {
     fetch("https://jackpot-ai-application-backend.onrender.com/imageaddress", {
       method: "post",
