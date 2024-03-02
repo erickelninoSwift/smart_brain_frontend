@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import "./Register.css"; // Import the CSS file
 import { v4 as uuidv4 } from "uuid";
 class Register extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       name: "",
@@ -45,14 +45,14 @@ class Register extends Component {
       .then((response) => {
         return response.json();
       })
-      .then((user) => {
-        if (user) {
-          this.props.currentUserActiveNow(user);
+      .then((userRegistered) => {
+        if (userRegistered) {
+          this.props.currentUserActiveNow(userRegistered);
           this.props.ElninonChangeRoute("home");
         }
       })
       .catch((err) => {
-        console.log("We couldnt register your user", err);
+        console.log("user could not be registered", err);
       });
   };
 
