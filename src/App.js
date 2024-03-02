@@ -81,7 +81,6 @@ class App extends Component {
     })
       .then((response) => response.json())
       .then((result) => {
-        console.log(result.outputs[0].data.regions[0].region_info);
         if (result) {
           fetch("https://jackpot-ai-application-backend.onrender.com/image", {
             method: "put",
