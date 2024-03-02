@@ -33,11 +33,15 @@ class Register extends Component {
   };
 
   onSubmitUser = (e) => {
+    this.setState({
+      userID: uuidv4(),
+    });
     e.preventDefault();
     fetch("https://jackpot-ai-application-backend.onrender.com/register", {
       method: "post",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
+        id: this.state.userID,
         name: this.state.name,
         email: this.state.email,
         password: this.state.password,
@@ -47,7 +51,7 @@ class Register extends Component {
         return response.json();
       })
       .then((user) => {
-        if (user.id) {
+        if (user) {
           this.props.currentUserActiveNow({
             email: this.state.email,
             name: this.state.name,

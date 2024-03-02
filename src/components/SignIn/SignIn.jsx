@@ -37,7 +37,7 @@ class SignIn extends Component {
         return response.json();
       })
       .then((data) => {
-        if (data.id) {
+        if (data.length > 0) {
           this.props.currentUserActiveNow({
             id: data.id,
             email: data.email,
