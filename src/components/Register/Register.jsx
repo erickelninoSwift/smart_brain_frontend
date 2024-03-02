@@ -34,7 +34,7 @@ class Register extends Component {
 
   onSubmitUser = (e) => {
     e.preventDefault();
-    fetch("https://localhost/register", {
+    fetch("https://jackpot-ai-application-backend.onrender.com/register", {
       method: "post",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
