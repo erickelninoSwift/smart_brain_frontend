@@ -47,7 +47,6 @@ class Register extends Component {
         return response.json();
       })
       .then((user) => {
-        console.log(user);
         if (user.id) {
           this.props.currentUserActiveNow({
             email: this.state.email,
