@@ -35,7 +35,7 @@ class Register extends Component {
     fetch("https://jackpot-ai-application-backend.onrender.com/register", {
       method: "post",
       headers: {
-        "Content-Type": "application/json",
+        "content-type": "application/json",
         "Access-Control-Allow-Origin": "*",
       },
       body: JSON.stringify({

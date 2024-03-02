@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import "./SignIn.styles.css"; // Import the CSS file
 
 class SignIn extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       signInEmail: "",
@@ -27,7 +27,10 @@ class SignIn extends Component {
     e.preventDefault();
     fetch("https://jackpot-ai-application-backend.onrender.com/signin", {
       method: "post",
-      headers: { "content-type": "application/json" },
+      headers: {
+        "content-type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+      },
       body: JSON.stringify({
         email: this.state.signInEmail,
         password: this.state.signInPassword,
