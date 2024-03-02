@@ -9,7 +9,6 @@ class Register extends Component {
       name: "",
       email: "",
       password: "",
-      dateJoined: new Date(),
     };
   }
 
