@@ -7,7 +7,6 @@ class Register extends Component {
 
     this.state = {
       name: "",
-      surname: "",
       email: "",
       password: "",
       userID: "",
@@ -20,11 +19,7 @@ class Register extends Component {
       name: event.target.value,
     });
   };
-  onSurnameChange = (event) => {
-    this.setState({
-      surname: event.target.value,
-    });
-  };
+
   onEmailChange = (event) => {
     this.setState({
       email: event.target.value,
@@ -39,10 +34,6 @@ class Register extends Component {
 
   onSubmitUser = (e) => {
     e.preventDefault();
-    const id = uuidv4();
-    this.setState({
-      userID: id,
-    });
     fetch("https://jackpot-ai-application-backend.onrender.com/register", {
       method: "post",
       headers: { "Content-Type": "application/json" },
@@ -57,9 +48,9 @@ class Register extends Component {
         return response.json();
       })
       .then((user) => {
+        console.log(user);
         if (user.id) {
           this.props.currentUserActiveNow({
-            id: this.state.userID,
             email: this.state.email,
             name: this.state.name,
             date: this.state.dateJoined,
@@ -92,17 +83,7 @@ class Register extends Component {
                   onChange={(e) => this.onNameChange(e)}
                 />
               </div>
-              <div className="mt3">
-                <label className="db fw6 lh-copy f6">Surname</label>
-                <input
-                  autoComplete="false"
-                  className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
-                  type="text"
-                  name="surname"
-                  id="surname"
-                  onChange={(e) => this.onSurnameChange(e)}
-                />
-              </div>
+
               <div className="mt3" style={{ color: "white" }}>
                 <label className="db fw6 lh-copy f6">Email</label>
                 <input
