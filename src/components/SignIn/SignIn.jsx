@@ -38,6 +38,7 @@ class SignIn extends Component {
         return response.json();
       })
       .then((data) => {
+        console.log(data);
         if (data.id) {
           this.props.currentUserActiveNow({
             id: data.id,
@@ -47,8 +48,6 @@ class SignIn extends Component {
             date: data.joined,
           });
           this.props.ElninonChangeRoute("home");
-        } else {
-          console.log("data was not found ", data);
         }
       });
   };
