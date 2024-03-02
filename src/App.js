@@ -60,8 +60,6 @@ class App extends Component {
     this.setState({
       profile: currentUser,
     });
-
-    console.log(currentUser);
   };
 
   displayBox = (box) => {
