@@ -25,7 +25,6 @@ class SignIn extends Component {
 
   onSubmitApplication = (e) => {
     e.preventDefault();
-
     fetch("https://jackpot-ai-application-backend.onrender.com/signin", {
       method: "post",
       headers: { "content-type": "application/json" },
@@ -47,8 +46,11 @@ class SignIn extends Component {
             date: data.joined,
           });
           this.props.ElninonChangeRoute("home");
+        } else {
+          console.log("data user was not found ");
         }
-      });
+      })
+      .catch((err) => console.log("error was found while Sign in "));
   };
   render() {
     const { ElninonChangeRoute } = this.props;
