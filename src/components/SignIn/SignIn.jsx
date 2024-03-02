@@ -26,7 +26,7 @@ class SignIn extends Component {
   onSubmitApplication = (e) => {
     e.preventDefault();
 
-    fetch("https://jackpot-ai-application-backend.onrender.com/signin", {
+    fetch("https://localhost/signin", {
       method: "post",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({
@@ -38,7 +38,6 @@ class SignIn extends Component {
         return response.json();
       })
       .then((data) => {
-        console.log(data);
         if (data.id) {
           this.props.currentUserActiveNow({
             id: data.id,
