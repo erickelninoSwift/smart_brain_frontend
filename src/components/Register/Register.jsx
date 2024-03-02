@@ -56,6 +56,9 @@ class Register extends Component {
 
           this.props.ElninonChangeRoute("home");
         }
+      })
+      .catch((err) => {
+        console.log("We couldnt register your user", err);
       });
   };
 
