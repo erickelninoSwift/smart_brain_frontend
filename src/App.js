@@ -57,9 +57,11 @@ class App extends Component {
   };
 
   currentUserSet = (currentUser) => {
-    this.setState({
-      profile: currentUser,
-    });
+    // this.setState({
+    //   profile: currentUser,
+    // });
+
+    console.log(currentUser);
   };
 
   displayBox = (box) => {

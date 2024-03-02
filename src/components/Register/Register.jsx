@@ -46,14 +46,8 @@ class Register extends Component {
         return response.json();
       })
       .then((user) => {
-        console.log(user);
         if (user) {
-          this.props.currentUserActiveNow({
-            email: user.email,
-            name: user.name,
-            date: this.state.dateJoined,
-          });
-
+          this.props.currentUserActiveNow(user);
           this.props.ElninonChangeRoute("home");
         }
       })
