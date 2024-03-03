@@ -49,8 +49,6 @@ class Register extends Component {
         if (userRegistered) {
           this.props.currentUserActiveNow(userRegistered);
           this.props.ElninonChangeRoute("home");
-        } else {
-          console.log("user could not be registred");
         }
       })
       .catch((err) => {

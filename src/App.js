@@ -39,7 +39,7 @@ const initialState = {
     email: "",
     name: "",
     entries: 0,
-    date: new Date(),
+    date: "",
   },
 };
 class App extends Component {
