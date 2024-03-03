@@ -36,9 +36,7 @@ class Register extends Component {
       method: "post",
       headers: {
         "content-type": "application/json",
-        "Access-Control-Allow-Origin": "*",
       },
-      mode: "cors",
       body: JSON.stringify({
         name: this.state.name,
         email: this.state.email,
