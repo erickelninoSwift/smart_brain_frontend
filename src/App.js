@@ -75,6 +75,7 @@ class App extends Component {
         "Content-Type": "application/json",
         "Access-Control-Allow-Origin": "*",
       },
+      mode: "cors",
       body: JSON.stringify({
         urlOfImage: this.state.imageUrl,
       }),
@@ -88,6 +89,7 @@ class App extends Component {
               "Content-Type": "application/json",
               "Access-Control-Allow-Origin": "*",
             },
+            mode: "cors",
             body: JSON.stringify({
               id: this.state.profile.id,
             }),

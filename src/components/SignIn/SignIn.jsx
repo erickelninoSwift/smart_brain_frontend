@@ -31,6 +31,7 @@ class SignIn extends Component {
         "content-type": "application/json",
         "Access-Control-Allow-Origin": "*",
       },
+      mode: "cors",
       body: JSON.stringify({
         email: this.state.signInEmail,
         password: this.state.signInPassword,
