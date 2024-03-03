@@ -69,7 +69,7 @@ class SignIn extends Component {
                 <label className="db fw6 lh-copy f6">Email</label>
                 <input
                   autoComplete="false"
-                  className="pa2 input-reset ba bg-black hover-bg-black hover-white w-100"
+                  className="pa2 input-reset ba bg-black white-90 hover-bg-black hover-white w-100"
                   type="email"
                   name="email-address"
                   id="email-address"
@@ -80,7 +80,7 @@ class SignIn extends Component {
                 <label className="db fw6 lh-copy f6">Password</label>
                 <input
                   autoComplete="false"
-                  className="b pa2 input-reset ba bg-black hover-bg-black hover-white w-100"
+                  className="b pa2 input-reset ba bg-black white-90 hover-bg-black hover-white w-100"
                   type="password"
                   name="password"
                   id="password"
@@ -91,7 +91,7 @@ class SignIn extends Component {
             <div className="" style={{ color: "white" }}>
               <input
                 style={{ color: "white" }}
-                className="b ph3 pv2 input-reset ba b--white bg-transparent grow pointer f6 dib"
+                className="b ph3 pv2 input-reset ba b--white white-90 bg-transparent grow pointer f6 dib"
                 type="submit"
                 value="Sign in"
                 onClick={(e) => this.onSubmitApplication(e)}
