@@ -39,7 +39,7 @@ const initialState = {
     email: "",
     name: "",
     entries: 0,
-    date: new Date().getDate(),
+    date: new Date(),
   },
 };
 class App extends Component {
@@ -50,7 +50,6 @@ class App extends Component {
   }
 
   onChangeInput = (DataProvided) => {
-    console.log(DataProvided);
     this.setState({
       imageUrl: DataProvided,
     });
