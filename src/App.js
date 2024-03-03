@@ -56,6 +56,7 @@ class App extends Component {
   };
 
   currentUserSet = (currentUser) => {
+    console.log(currentUser);
     this.setState({
       profile: currentUser,
     });
