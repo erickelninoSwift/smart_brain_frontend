@@ -94,7 +94,7 @@ class Register extends Component {
                 <label className="db fw6 lh-copy f6">Password</label>
                 <input
                   autoComplete="false"
-                  className="b pa2 input-reset ba bg-black hover-bg-black hover-white w-100"
+                  className="b pa2 input-reset ba bg-black white-90 hover-bg-black hover-white w-100"
                   type="password"
                   name="password"
                   id="password"
