@@ -98,6 +98,7 @@ class App extends Component {
                 },
               });
             });
+          console.log(result);
           this.displayBox(handleFacelocation(result));
         }
       })
