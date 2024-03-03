@@ -81,7 +81,7 @@ class App extends Component {
     })
       .then((response) => response.json())
       .then((result) => {
-        if (result.length > 0) {
+        if (result) {
           fetch("https://jackpot-ai-application-backend.onrender.com/image", {
             method: "put",
             headers: {
@@ -102,8 +102,6 @@ class App extends Component {
               });
             });
           this.displayBox(handleFacelocation(result));
-        } else {
-          console.log("failed to get the correct data in");
         }
       })
       .catch((error) => console.log("error", error));
